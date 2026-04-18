@@ -1,0 +1,189 @@
+/* ─── Hero ──────────────────────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--gem-navy) 0%, #0e3d7a 50%, #0a5c8a 100%);
+  padding: 64px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 50px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+.hero-badge span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gem-amber);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 6vw, 3.2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.18;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.hero-title span { color: var(--gem-amber); }
+
+.hero-sub {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.9rem, 3vw, 1.05rem);
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+/* ── Hero Search ── */
+.hero-search-wrap {
+  background: #fff;
+  border-radius: 60px;
+  padding: 6px 6px 6px 22px;
+  display: flex;
+  align-items: center;
+  max-width: 680px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+.hero-search-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.97rem;
+  color: var(--gem-text);
+  background: transparent;
+  font-family: inherit;
+  min-width: 0;
+}
+.hero-search-wrap select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.87rem;
+  color: var(--gem-muted);
+  padding: 0 12px 0 8px;
+  border-left: 1.5px solid var(--gem-border);
+  font-family: inherit;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.btn-hero-search {
+  background: var(--gem-sky);
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.6rem 1.8rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+.btn-hero-search:hover {
+  background: #1a6fd4;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(47, 128, 237, 0.5);
+}
+
+.hero-popular {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 8px;
+}
+
+/* ── Hero Stats ── */
+.hero-stat {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+}
+.hero-stat .num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--gem-amber);
+}
+.hero-stat .lbl {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ── Category Pill Bar ── */
+.cat-bar {
+  background: #fff;
+  border-bottom: 1.5px solid var(--gem-border);
+}
+.cat-pill {
+  background: #fff;
+  border: 1.5px solid var(--gem-border);
+  border-radius: 50px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--gem-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-family: inherit;
+}
+.cat-pill:hover,
+.cat-pill.active {
+  background: var(--gem-blue);
+  border-color: var(--gem-blue);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(26, 86, 160, 0.3);
+}
+
+/* ── Portal Badges ── */
+.portal-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 22px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  backdrop-filter: blur(10px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .hero { padding: 40px 0 56px; }
+  .hero-search-wrap {
+    border-radius: 14px;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 8px;
+  }
+  .hero-search-wrap input { width: 100%; }
+  .hero-search-wrap select {
+    border-left: none;
+    border-top: 1.5px solid var(--gem-border);
+    padding: 6px 0;
+    width: 100%;
+  }
+  .btn-hero-search { width: 100%; text-align: center; }
+}

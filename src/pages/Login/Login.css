@@ -1,0 +1,123 @@
+/* ─── Auth Pages (Login & Signup) ───────────────────────────────────────────── */
+
+.auth-page {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, var(--gem-navy) 0%, #0e3d7a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  position: relative;
+}
+
+.auth-dots {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+
+.auth-card {
+  background: #fff;
+  border: 1.5px solid var(--gem-border);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--gem-shadow-lg);
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gem-navy);
+  margin-bottom: 4px;
+  text-decoration: none;
+  display: block;
+}
+.auth-logo span { color: var(--gem-sky); }
+
+.auth-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gem-navy);
+}
+
+.auth-subtitle {
+  color: var(--gem-muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* ── Error Message ── */
+.auth-field-error {
+  color: var(--gem-red);
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+/* ── Divider ── */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gem-muted);
+  font-size: 0.82rem;
+  margin: 4px 0;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gem-border);
+}
+
+/* ── Switch Link ── */
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.87rem;
+  color: var(--gem-muted);
+}
+.auth-switch a {
+  color: var(--gem-sky);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.auth-switch a:hover { text-decoration: underline; }
+
+/* ── Remember + Forgot ── */
+.auth-remember-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.83rem;
+}
+.auth-remember-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--gem-muted);
+}
+.auth-forgot {
+  color: var(--gem-sky);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.83rem;
+}
+.auth-forgot:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .auth-card { padding: 28px 20px; }
+  .auth-title { font-size: 1.5rem; }
+}

@@ -1,0 +1,188 @@
+/* ─── Navbar ────────────────────────────────────────────────────────────────── */
+.gem-nav {
+  background: var(--gem-navy);
+  position: sticky;
+  top: 0;
+  z-index: 1040;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* ── Brand ── */
+.nav-brand {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.nav-brand:hover { color: #fff; }
+.nav-brand span  { color: var(--gem-amber); }
+
+/* ── Desktop Nav Links ── */
+.gem-nav .nav-link {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 0.45rem 0.9rem !important;
+  border-radius: 8px;
+  transition: var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.gem-nav .nav-link:hover,
+.gem-nav .nav-link.active {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Search ── */
+.nav-search-wrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 320px;
+}
+.gem-search {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50px;
+  color: #fff;
+  padding: 0.42rem 1rem;
+  font-size: 0.87rem;
+  width: 100%;
+  min-width: 0;
+  transition: var(--transition);
+  display: block;
+  font-family: inherit;
+}
+.gem-search::placeholder { color: rgba(255, 255, 255, 0.5); }
+.gem-search:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--gem-sky);
+}
+
+/* ── Action Buttons ── */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-login-nav {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.82rem;
+  border-radius: 50px;
+  padding: 0.42rem 1rem;
+  transition: var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-login-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-register-nav {
+  background: var(--gem-amber);
+  border: none;
+  color: var(--gem-navy);
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-radius: 50px;
+  padding: 0.42rem 1rem;
+  transition: var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-register-nav:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.btn-hamburger {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--transition);
+  font-family: inherit;
+}
+.btn-hamburger:hover { background: rgba(255, 255, 255, 0.1); }
+
+.nav-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gem-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--gem-navy);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Mobile Drawer ── */
+.nav-mobile-drawer {
+  background: #0d2d52;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 0 16px;
+}
+.nav-mobile-drawer .gem-search {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.nav-mobile-drawer .nav-link {
+  display: block;
+  padding: 10px 16px !important;
+  border-radius: 10px;
+  font-size: 0.9rem !important;
+}
+.nav-mobile-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 8px 0;
+}
+.nav-mobile-auth {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0 0;
+}
+.nav-mobile-auth button {
+  flex: 1;
+  padding: 0.55rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .nav-search-wrap { display: none !important; }
+}

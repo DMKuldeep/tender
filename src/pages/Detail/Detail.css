@@ -1,0 +1,162 @@
+/* ─── Detail Page ───────────────────────────────────────────────────────────── */
+
+/* ── Breadcrumb ── */
+.detail-breadcrumb {
+  font-size: 0.83rem;
+  margin-bottom: 20px;
+}
+.detail-breadcrumb a {
+  color: var(--gem-sky);
+  text-decoration: none;
+  cursor: pointer;
+}
+.detail-breadcrumb a:hover { text-decoration: underline; }
+
+/* ── Main Card ── */
+.detail-card {
+  background: #fff;
+  border: 1.5px solid var(--gem-border);
+  border-radius: var(--gem-radius);
+  padding: 36px;
+}
+
+.detail-emoji-display {
+  background: var(--gem-light);
+  border-radius: 12px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  margin-bottom: 16px;
+}
+
+/* ── Image Thumbs ── */
+.img-thumb {
+  width: 68px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid var(--gem-border);
+  cursor: pointer;
+  background: var(--gem-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.img-thumb.active,
+.img-thumb:hover { border-color: var(--gem-sky); }
+
+/* ── Detail Title ── */
+.detail-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--gem-navy);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.detail-portal-tag {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--gem-teal);
+  background: rgba(14, 159, 133, 0.1);
+  padding: 0.18rem 0.55rem;
+  border-radius: 20px;
+}
+
+.detail-desc {
+  color: var(--gem-muted);
+  line-height: 1.7;
+  font-size: 0.93rem;
+  margin-bottom: 20px;
+}
+
+/* ── Info Chips ── */
+.info-chip {
+  background: var(--gem-light);
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+.info-chip .lbl {
+  font-size: 0.74rem;
+  color: var(--gem-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.info-chip .val {
+  font-weight: 700;
+  color: var(--gem-navy);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* ── CTA Panel ── */
+.cta-panel {
+  background: #fff;
+  border: 1.5px solid var(--gem-border);
+  border-radius: var(--gem-radius);
+  padding: 28px;
+  position: sticky;
+  top: 80px;
+}
+
+.cta-value-label {
+  font-size: 0.8rem;
+  color: var(--gem-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.cta-price {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--gem-blue);
+  margin-bottom: 4px;
+}
+
+.cta-status {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.cta-status.open   { color: var(--gem-teal); }
+.cta-status.urgent { color: var(--gem-red); }
+
+.cta-bid-input-wrap {
+  background: var(--gem-light);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+.cta-bid-input-label {
+  font-size: 0.78rem;
+  color: var(--gem-muted);
+  margin-bottom: 4px;
+}
+
+.cta-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.83rem;
+  color: var(--gem-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+  .cta-panel { position: static; margin-top: 24px; }
+  .detail-card { padding: 22px; }
+}
+
+@media (max-width: 575px) {
+  .detail-emoji-display { height: 160px; font-size: 4rem; }
+  .detail-title { font-size: 1.25rem; }
+}

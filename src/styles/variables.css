@@ -1,0 +1,190 @@
+/* ─── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --gem-navy:      #0a2340;
+  --gem-blue:      #1a56a0;
+  --gem-sky:       #2f80ed;
+  --gem-teal:      #0e9f85;
+  --gem-amber:     #f59e0b;
+  --gem-red:       #ef4444;
+  --gem-light:     #f0f4f8;
+  --gem-card:      #ffffff;
+  --gem-border:    #d1dce8;
+  --gem-text:      #1e3a5f;
+  --gem-muted:     #6b8299;
+  --gem-radius:    14px;
+  --gem-shadow:    0 2px 16px rgba(10,35,64,.10);
+  --gem-shadow-lg: 0 8px 40px rgba(10,35,64,.18);
+  --transition:    all .22s cubic-bezier(.4,0,.2,1);
+}
+
+/* ─── Global Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--gem-light);
+  color: var(--gem-text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+/* ─── Bootstrap Container Padding Fix (mobile safe) ────────────────────────── */
+.container,
+.container-xl,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg {
+  padding-left:  max(16px, env(safe-area-inset-left))  !important;
+  padding-right: max(16px, env(safe-area-inset-right)) !important;
+}
+
+/* ─── Shared Buttons ────────────────────────────────────────────────────────── */
+.btn-bid {
+  background: linear-gradient(135deg, var(--gem-sky), var(--gem-teal));
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: .5rem 1.1rem;
+  font-size: .84rem;
+  font-weight: 700;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.btn-bid:hover {
+  opacity: .92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(47,128,237,.4);
+}
+
+.btn-outline-gem {
+  border: 1.5px solid var(--gem-sky);
+  color: var(--gem-sky);
+  background: transparent;
+  border-radius: 8px;
+  padding: .5rem .9rem;
+  font-size: .84rem;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.btn-outline-gem:hover {
+  background: var(--gem-sky);
+  color: #fff;
+}
+
+.btn-primary-gem {
+  background: linear-gradient(135deg, var(--gem-blue), var(--gem-sky));
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  padding: .72rem 1.5rem;
+  font-size: .95rem;
+  font-weight: 700;
+  width: 100%;
+  transition: var(--transition);
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn-primary-gem:hover {
+  opacity: .92;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(26,86,160,.4);
+}
+
+/* ─── Shared Form Elements ──────────────────────────────────────────────────── */
+.gem-input {
+  border: 1.5px solid var(--gem-border);
+  border-radius: 10px;
+  padding: .65rem 1rem;
+  font-size: .92rem;
+  width: 100%;
+  transition: var(--transition);
+  font-family: inherit;
+  color: var(--gem-text);
+  display: block;
+}
+.gem-input:focus {
+  border-color: var(--gem-sky);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(47,128,237,.12);
+}
+
+.gem-label {
+  font-size: .83rem;
+  font-weight: 600;
+  color: var(--gem-text);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ─── Section Headers ───────────────────────────────────────────────────────── */
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gem-navy);
+}
+.section-title span { color: var(--gem-sky); }
+
+.section-divider {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gem-sky), var(--gem-teal));
+  border-radius: 4px;
+}
+
+/* ─── Rating Stars ──────────────────────────────────────────────────────────── */
+.rating-stars {
+  color: #f59e0b;
+  font-size: .85rem;
+  letter-spacing: 1px;
+}
+
+/* ─── Status Pill ───────────────────────────────────────────────────────────── */
+.status-pill {
+  padding: .22rem .7rem;
+  border-radius: 50px;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+/* ─── Skeleton Loader ───────────────────────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #e8eef4 25%, #d1dce8 50%, #e8eef4 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Fade-up Animation ─────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up          { animation: fadeUp .45s ease forwards; }
+.fade-up-d1       { animation-delay: .1s; opacity: 0; }
+.fade-up-d2       { animation-delay: .2s; opacity: 0; }
+.fade-up-d3       { animation-delay: .3s; opacity: 0; }
+
+/* ─── Custom Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--gem-light); }
+::-webkit-scrollbar-thumb { background: var(--gem-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gem-muted); }

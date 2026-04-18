@@ -1,0 +1,32 @@
+/* Signup page re-uses Login.css for auth-page, auth-card, etc.
+   Only signup-specific additions are here. */
+
+.signup-terms {
+  font-size: 0.78rem;
+  color: var(--gem-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+.signup-terms a {
+  color: var(--gem-sky);
+  cursor: pointer;
+  text-decoration: none;
+}
+.signup-terms a:hover { text-decoration: underline; }
+
+.signup-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--gem-light);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 4px;
+}
+.signup-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: var(--gem-text);
+}
