@@ -73,7 +73,7 @@ export default function Landing() {
               <div className="lp-preview-dot" style={{ background: "#ff5f57" }} />
               <div className="lp-preview-dot" style={{ background: "#ffbd2e" }} />
               <div className="lp-preview-dot" style={{ background: "#28c840" }} />
-              <div className="lp-preview-url">https://procure-brain.in/dashboard</div>
+              <div className="lp-preview-url">https://procurebrain.in/dashboard</div>
             </div>
 
             {/* Mini dashboard */}
@@ -209,7 +209,7 @@ export default function Landing() {
             {STEPS.map((s, i) => (
               <div key={s.num} className="col-sm-6 col-lg-3">
                 <div style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 16, padding: 28, height: "100%", position: "relative" }}>
-                  <div style={{ fontFamily: "Inter, sans-serif", fontSize: "2rem", fontWeight: 900, color: "#f1f5f9", marginBottom: 12, lineHeight: 1 }}>{s.num}</div>
+                  <div style={{ fontFamily: "Inter, sans-serif", fontSize: "2rem", fontWeight: 900, marginBottom: 12, lineHeight: 1 }}>{s.num}</div>
                   <div style={{ fontWeight: 700, color: "#0f172a", fontSize: ".97rem", marginBottom: 8 }}>{s.title}</div>
                   <div style={{ color: "#64748b", fontSize: ".86rem", lineHeight: 1.6 }}>{s.desc}</div>
                   {i < STEPS.length - 1 && (

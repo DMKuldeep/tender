@@ -1,0 +1,73 @@
+/* ─── Admin Panel ────────────────────────────────────────────────────────────── */
+.admin-layout { display:flex; min-height:calc(100vh - 65px); }
+
+.admin-sidebar {
+  width:220px; flex-shrink:0;
+  background:#0f172a;
+  display:flex; flex-direction:column;
+  padding:20px 0;
+  position:sticky; top:65px;
+  height:calc(100vh - 65px);
+  overflow-y:auto;
+}
+
+.admin-brand { padding:0 20px 20px; border-bottom:1px solid rgba(255,255,255,.08); margin-bottom:16px; }
+
+.admin-profile { display:flex; align-items:center; gap:10px; padding:0 16px 16px; border-bottom:1px solid rgba(255,255,255,.08); margin-bottom:8px; }
+.admin-avatar  { width:36px; height:36px; border-radius:50%; background:#ef4444; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.8rem; color:#fff; flex-shrink:0; }
+
+.admin-menu { flex:1; }
+.admin-menu-item {
+  display:flex; align-items:center; gap:10px;
+  padding:10px 20px; color:rgba(255,255,255,.6);
+  font-size:.86rem; font-weight:500; text-decoration:none;
+  border-left:3px solid transparent; transition:all .18s;
+}
+.admin-menu-item:hover  { background:rgba(255,255,255,.06); color:#fff; }
+.admin-menu-item.active { background:rgba(239,68,68,.15); color:#fff; border-left-color:#ef4444; }
+
+.admin-logout {
+  margin:16px; background:none; border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.5); border-radius:8px; padding:8px 12px;
+  font-size:.82rem; cursor:pointer; font-family:inherit; text-align:left; transition:all .2s;
+}
+.admin-logout:hover { color:rgba(255,255,255,.8); border-color:rgba(255,255,255,.25); }
+
+.admin-main { flex:1; background:#f8fafc; overflow-x:hidden; }
+
+.admin-topbar {
+  background:#fff; border-bottom:1px solid #e2e8f0;
+  padding:14px 28px; display:flex; justify-content:space-between; align-items:center;
+  position:sticky; top:65px; z-index:10;
+}
+
+.admin-content { padding:28px; }
+
+/* ── Admin stat card ── */
+.admin-stat { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; transition:all .2s; }
+.admin-stat:hover { box-shadow:0 4px 20px rgba(0,0,0,.08); transform:translateY(-2px); }
+.admin-stat-num   { font-family:'Inter',sans-serif; font-size:1.7rem; font-weight:800; }
+.admin-stat-label { font-size:.78rem; color:#64748b; font-weight:500; }
+.admin-stat-trend { font-size:.74rem; font-weight:600; margin-top:2px; }
+
+/* ── Admin table ── */
+.admin-table { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; }
+.admin-table-header { padding:16px 20px; border-bottom:1px solid #f1f5f9; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.admin-table-title  { font-weight:800; font-size:1rem; color:#0f172a; font-family:'Inter',sans-serif; }
+.admin-table-wrap   { overflow-x:auto; }
+.admin-table table  { width:100%; border-collapse:collapse; font-size:.86rem; }
+.admin-table thead  { background:#f8fafc; }
+.admin-table th { padding:11px 16px; font-weight:700; color:#374151; text-align:left; font-size:.78rem; text-transform:uppercase; letter-spacing:.5px; border-bottom:1.5px solid #e2e8f0; white-space:nowrap; }
+.admin-table td { padding:13px 16px; border-bottom:1px solid #f8fafc; vertical-align:middle; }
+.admin-table tr:last-child td { border-bottom:none; }
+.admin-table tr:hover td { background:#f8fafc; }
+
+/* ── Tenant badge colors ── */
+.tenant-a { background:#fff7ed; color:#c2410c; border:1px solid #fed7aa; }
+.tenant-b { background:#fef2f2; color:#dc2626; border:1px solid #fecaca; }
+.tenant-c { background:#f5f3ff; color:#7c3aed; border:1px solid #ddd6fe; }
+
+@media (max-width:991px) {
+  .admin-sidebar { display:none; }
+  .admin-content { padding:16px; }
+}

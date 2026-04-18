@@ -157,3 +157,16 @@
 @media (max-width: 767px) {
   .nav-search-wrap { display: none !important; }
 }
+
+/* ── Admin badge ── */
+.nav-admin-badge {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
