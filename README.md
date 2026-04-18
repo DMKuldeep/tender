@@ -1,4 +1,4 @@
-# TenderGeM — Multi-Tenant Tender Intelligence SaaS
+# Procure-Brain — Multi-Tenant Tender Intelligence SaaS
 
 A complete, production-ready React + TypeScript frontend for a Government e-Marketplace style tender portal.
 

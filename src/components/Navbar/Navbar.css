@@ -1,64 +1,59 @@
-/* ─── Navbar ────────────────────────────────────────────────────────────────── */
+/* ─── Navbar — Light Clean Theme ───────────────────────────────────────────── */
 .gem-nav {
-  background: var(--gem-navy);
+  background: #ffffff;
+  border-bottom: 1px solid #e8ecf0;
   position: sticky;
   top: 0;
   z-index: 1040;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 12px rgba(0,0,0,.06);
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  gap: 10px;
+  padding: 14px 0;
+  gap: 12px;
   min-width: 0;
 }
 
 /* ── Brand ── */
 .nav-brand {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
   font-weight: 800;
-  color: #fff;
+  color: #0f172a;
   letter-spacing: -0.5px;
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
   text-decoration: none;
 }
-.nav-brand:hover { color: #fff; }
-.nav-brand span  { color: var(--gem-amber); }
+.nav-brand:hover { color: #0f172a; }
+.nav-brand span  { color: var(--gem-sky); }
 
-/* ── Desktop Nav Links ── */
+/* ── Desktop Links ── */
 .gem-nav .nav-link {
-  color: rgba(255, 255, 255, 0.78) !important;
-  font-size: 0.86rem;
+  color: #4b5563 !important;
+  font-size: 0.88rem;
   font-weight: 500;
   padding: 0.45rem 0.9rem !important;
   border-radius: 8px;
   transition: var(--transition);
   white-space: nowrap;
   cursor: pointer;
+  text-decoration: none;
 }
-.gem-nav .nav-link:hover,
-.gem-nav .nav-link.active {
-  color: #fff !important;
-  background: rgba(255, 255, 255, 0.1);
-}
+.gem-nav .nav-link:hover { color: #0f172a !important; background: #f3f4f6; }
+.gem-nav .nav-link.active { color: var(--gem-sky) !important; background: #eff6ff; font-weight: 600; }
 
 /* ── Search ── */
-.nav-search-wrap {
-  flex: 1 1 auto;
-  min-width: 0;
-  max-width: 320px;
-}
+.nav-search-wrap { flex: 1 1 auto; min-width: 0; max-width: 300px; }
 .gem-search {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
   border-radius: 50px;
-  color: #fff;
-  padding: 0.42rem 1rem;
+  color: #0f172a;
+  padding: 0.46rem 1rem 0.46rem 1rem;
   font-size: 0.87rem;
   width: 100%;
   min-width: 0;
@@ -66,121 +61,97 @@
   display: block;
   font-family: inherit;
 }
-.gem-search::placeholder { color: rgba(255, 255, 255, 0.5); }
-.gem-search:focus {
-  outline: none;
-  background: rgba(255, 255, 255, 0.18);
-  border-color: var(--gem-sky);
-}
+.gem-search::placeholder { color: #94a3b8; }
+.gem-search:focus { outline: none; background: #fff; border-color: var(--gem-sky); box-shadow: 0 0 0 3px rgba(47,128,237,.1); }
 
-/* ── Action Buttons ── */
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
+/* ── Actions ── */
+.nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 
 .btn-login-nav {
   background: transparent;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  color: #fff;
+  border: 1.5px solid #d1d5db;
+  color: #374151;
   font-weight: 600;
-  font-size: 0.82rem;
-  border-radius: 50px;
-  padding: 0.42rem 1rem;
+  font-size: 0.84rem;
+  border-radius: 8px;
+  padding: 0.46rem 1.1rem;
   transition: var(--transition);
   white-space: nowrap;
   cursor: pointer;
   font-family: inherit;
 }
-.btn-login-nav:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
-}
+.btn-login-nav:hover { border-color: #9ca3af; background: #f9fafb; }
 
 .btn-register-nav {
-  background: var(--gem-amber);
+  background: #0f172a;
   border: none;
-  color: var(--gem-navy);
-  font-weight: 700;
-  font-size: 0.82rem;
-  border-radius: 50px;
-  padding: 0.42rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.84rem;
+  border-radius: 8px;
+  padding: 0.46rem 1.2rem;
   transition: var(--transition);
   white-space: nowrap;
   cursor: pointer;
   font-family: inherit;
 }
-.btn-register-nav:hover {
-  background: #fbbf24;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-}
+.btn-register-nav:hover { background: #1e293b; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(15,23,42,.25); }
 
 .btn-hamburger {
   background: transparent;
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
+  border: 1.5px solid #e5e7eb;
+  color: #374151;
   border-radius: 8px;
-  padding: 5px 10px;
-  font-size: 1.1rem;
+  padding: 6px 11px;
+  font-size: 1rem;
   line-height: 1;
   cursor: pointer;
   flex-shrink: 0;
   transition: var(--transition);
   font-family: inherit;
 }
-.btn-hamburger:hover { background: rgba(255, 255, 255, 0.1); }
+.btn-hamburger:hover { background: #f3f4f6; }
 
 .nav-avatar {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: var(--gem-amber);
+  background: var(--gem-sky);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: 0.9rem;
-  color: var(--gem-navy);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #fff;
   cursor: pointer;
   flex-shrink: 0;
 }
 
 /* ── Mobile Drawer ── */
 .nav-mobile-drawer {
-  background: #0d2d52;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #fff;
+  border-top: 1px solid #f1f5f9;
   padding: 12px 0 16px;
 }
 .nav-mobile-drawer .gem-search {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
   margin-bottom: 10px;
   width: 100%;
 }
 .nav-mobile-drawer .nav-link {
-  display: block;
-  padding: 10px 16px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px !important;
   border-radius: 10px;
   font-size: 0.9rem !important;
+  color: #374151 !important;
 }
-.nav-mobile-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 8px 0;
-}
-.nav-mobile-auth {
-  display: flex;
-  gap: 8px;
-  padding: 8px 0 0;
-}
-.nav-mobile-auth button {
-  flex: 1;
-  padding: 0.55rem 0.5rem;
-  font-size: 0.85rem;
-}
+.nav-mobile-drawer .nav-link:hover { background: #f8fafc; }
+.nav-mobile-drawer .nav-link.active { background: #eff6ff; color: var(--gem-sky) !important; }
+
+.nav-mobile-divider { height: 1px; background: #f1f5f9; margin: 10px 0; }
+.nav-mobile-auth { display: flex; gap: 8px; padding-top: 4px; }
+.nav-mobile-auth button { flex: 1; padding: 0.6rem 0.5rem; font-size: 0.85rem; }
 
 /* ── Responsive ── */
 @media (max-width: 767px) {

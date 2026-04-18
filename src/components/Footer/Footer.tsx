@@ -31,7 +31,7 @@ export default function Footer() {
               style={{ cursor: "pointer" }}
               onClick={() => navigate("/")}
             >
-              Tender<span style={{ color: "var(--gem-amber)" }}>GeM</span>
+              Procure<span style={{ color: "var(--gem-sky)" }}>Brain</span>
             </div>
             <p style={{ fontSize: ".87rem", lineHeight: 1.7, maxWidth: 280, marginBottom: 20 }}>
               India's most comprehensive multi-tenant tender intelligence platform. Track, bid, and win
@@ -59,7 +59,7 @@ export default function Footer() {
             <div className="footer-col-title">Contact</div>
             <div className="footer-contact-info">
               <div>📞 1800-XXX-XXXX</div>
-              <div>📧 support@tendergem.in</div>
+              <div>📧 support@procure-brain.in</div>ß
               <div>🏢 New Delhi, India</div>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="footer-bottom py-3">
         <div className="container-xl d-flex flex-wrap justify-content-between align-items-center gap-2">
-          <span>© 2025 TenderGeM. All rights reserved. Government of India compliant platform.</span>
+          <span>© 2025 ProcureBrain. All rights reserved. Government of India compliant platform.</span>
           <div className="d-flex gap-3">
             {["Privacy", "Terms", "Cookies"].map(l => (
               <button key={l} className="footer-link" style={{ marginBottom: 0 }}>{l}</button>

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 import Navbar    from "./components/Navbar/Navbar";
 import Footer    from "./components/Footer/Footer";
-import Home      from "./pages/Home/Home";
+import Landing   from "./pages/Landing/Landing";
 import Listings  from "./pages/Listings/Listings";
 import Detail    from "./pages/Detail/Detail";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -12,24 +12,24 @@ import Signup    from "./pages/Signup/Signup";
 
 import "./styles/variables.css";
 
-// Simple protected-route wrapper
+const NO_SHELL = ["/login", "/signup"];
+
 function Protected({ user, children }: { user: boolean; children: JSX.Element }) {
   return user ? children : <Navigate to="/login" replace />;
 }
 
-// Pages that don't show the footer
-const NO_FOOTER = ["/login", "/signup"];
-
-function Layout({ user, setUser }: { user: boolean; setUser: (v: boolean) => void }) {
+function Shell({ user, setUser }: { user: boolean; setUser: (v: boolean) => void }) {
+  const { pathname } = useLocation();
+  const hideShell    = NO_SHELL.includes(pathname);
   return (
     <>
-      <Navbar user={user} setUser={setUser} />
+      {!hideShell && <Navbar user={user} setUser={setUser} />}
       <Routes>
-        <Route path="/"             element={<Home />} />
-        <Route path="/tenders"      element={<Listings />} />
-        <Route path="/tenders/:id"  element={<Detail />} />
-        <Route path="/login"        element={<Login  setUser={setUser} />} />
-        <Route path="/signup"       element={<Signup setUser={setUser} />} />
+        <Route path="/"            element={<Landing />} />
+        <Route path="/tenders"     element={<Listings />} />
+        <Route path="/tenders/:id" element={<Detail />} />
+        <Route path="/login"       element={<Login  setUser={setUser} />} />
+        <Route path="/signup"      element={<Signup setUser={setUser} />} />
         <Route
           path="/dashboard"
           element={
@@ -38,28 +38,18 @@ function Layout({ user, setUser }: { user: boolean; setUser: (v: boolean) => voi
             </Protected>
           }
         />
-        {/* Catch-all → home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-
-      {/* Footer hidden on auth pages */}
-      <ConditionalFooter />
+      {!hideShell && <Footer />}
     </>
   );
 }
 
-function ConditionalFooter() {
-  // Check current path to hide footer on login/signup
-  const hide = NO_FOOTER.some(p => window.location.pathname === p);
-  return hide ? null : <Footer />;
-}
-
 export default function App() {
   const [user, setUser] = useState(false);
-
   return (
     <BrowserRouter>
-      <Layout user={user} setUser={setUser} />
+      <Shell user={user} setUser={setUser} />
     </BrowserRouter>
   );
 }

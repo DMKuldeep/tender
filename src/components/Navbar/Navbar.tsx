@@ -36,7 +36,7 @@ export default function Navbar({ user, setUser }: NavbarProps) {
 
           {/* Brand */}
           <NavLink to="/" className="nav-brand" onClick={() => setOpen(false)}>
-            Tender<span>GeM</span>
+            Procure<span>Brain</span>
           </NavLink>
 
           {/* Desktop Search */}
