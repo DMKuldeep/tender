@@ -113,7 +113,7 @@
 .logo-item {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: #2e7fed;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -193,7 +193,7 @@
 .preview-bar.accent { background: var(--gem-teal); opacity: 1; }
 
 /* ── Features Section ── */
-.lp-features { background: #fff; padding: 80px 0; }
+.lp-features { background: #fff; padding: 40px 0; }
 .feature-card {
   background: #f8fafc;
   border: 1px solid #e2e8f0;

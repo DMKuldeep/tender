@@ -142,7 +142,7 @@ export default function Landing() {
       <section className="lp-features">
         <div className="container-xl">
           <div className="text-center mb-5">
-            <div className="lp-tag" style={{ margin: "0 auto 16px" }}>Everything you need</div>
+            <div className="lp-tag" style={{ margin: "0 auto 10px" }}>Everything you need</div>
             <h2 style={{ fontFamily: "Inter, sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,4vw,2.4rem)", color: "#0f172a", letterSpacing: "-0.5px", marginBottom: 12 }}>
               Built for serious tender teams
             </h2>
@@ -165,7 +165,7 @@ export default function Landing() {
       </section>
 
       {/* ══════════ INSIGHTS SECTION (Image 1 right-side layout) ══════════ */}
-      <section style={{ background: "#fff", padding: "80px 0" }}>
+      <section style={{ background: "#fff", padding: "50px 0" }}>
         <div className="container-xl">
           <div className="row g-5 align-items-center">
             <div className="col-lg-5">
