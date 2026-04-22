@@ -12,6 +12,7 @@ import Pricing   from "./pages/Pricing/Pricing";
 import Login     from "./pages/Login/Login";
 import Signup    from "./pages/Signup/Signup";
 import NotFound  from "./pages/NotFound/NotFound";
+import Companies from "./pages/Companies/Companies";
 
 import "./styles/variables.css";
 
@@ -49,6 +50,7 @@ function Shell() {
         <Route path="/admin/*"     element={<ProtectedAdmin><Admin /></ProtectedAdmin>} />
         <Route path="/404"         element={<NotFound />} />
         <Route path="*"            element={<Navigate to="/404" replace />} />
+        <Route path="/companies" element={<Companies />} />
       </Routes>
       {!hideShell && !hideFooter && <Footer />}
     </>

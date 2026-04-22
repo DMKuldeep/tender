@@ -13,6 +13,7 @@ interface NavbarProps {
 const PUBLIC_LINKS = [
   { to: "/",        label: "Home",    end: true  },
   { to: "/tenders", label: "Tenders", end: false },
+  { to: "/companies", label: "Companies", end: false },
   { to: "/pricing", label: "Pricing", end: false },
 ];
 const USER_LINKS = [
@@ -37,7 +38,7 @@ export default function Navbar({ user, userRole, userName, setUser }: NavbarProp
   const initials = userName ? userName.split(" ").map(w => w[0]).join("").slice(0,2) : "U";
 
   const goSearch = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && search.trim()) { navigate("/tenders"); setOpen(false); }
+    if (e.key === "Enter" && search.trim()) { navigate(`/tenders?q=${search}`); setOpen(false); }
   };
 
   return (

@@ -116,11 +116,14 @@ export default function Detail() {
             </div>
 
             <div className="d-flex flex-column gap-3">
-              <button className="btn-primary-gem">⚡ Place Bid Now</button>
-              <button className="btn-outline-gem w-100" style={{ padding: ".65rem" }}>
-                🔔 Add to Watchlist
-              </button>
-              <button className="btn-outline-gem w-100" style={{ padding: ".65rem" }}>
+              <button className="btn-primary-gem" onClick={() => navigate("/login")}>
+                ⚡ Place Bid Now
+              </button>          <button className="btn-outline-gem w-100" style={{ padding: ".65rem" }}
+                    onClick={() => navigate("/login")}>
+                    🔔 Add to Watchlist
+                  </button>
+              <button className="btn-outline-gem w-100" style={{ padding: ".65rem" }}
+                onClick={() => navigate("/login")}>
                 📋 Download RFP
               </button>
             </div>

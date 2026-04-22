@@ -5,7 +5,7 @@ import "./Pricing.css";
 const PLANS = [
   {
     name:"Starter", desc:"Perfect for small teams exploring government tenders.",
-    monthly:"₹999", annual:"₹799", color:"#e2e8f0", featured:false,
+    monthly:"₹799", annual:"₹799", color:"#e2e8f0", featured:false,
     features:[
       {t:"5 team members",          ok:true},
       {t:"100 tender alerts/month", ok:true},
@@ -20,7 +20,7 @@ const PLANS = [
   },
   {
     name:"Premium", desc:"For growing procurement teams managing multiple tenders.", 
-    monthly:"₹2,999", annual:"₹2,399", color:"#2f80ed", featured:true,
+    monthly:"₹2,999", annual:"₹2,999", color:"#2f80ed", featured:true,
     features:[
       {t:"25 team members",          ok:true},
       {t:"Unlimited tender alerts",  ok:true},
@@ -81,9 +81,9 @@ export default function Pricing() {
 
           {/* Annual toggle */}
           <div className="pricing-toggle-wrap">
-            <button className={`pricing-toggle-btn${!annual?" active":""}`} onClick={()=>setAnnual(false)}>Monthly</button>
+            <button className={`pricing-toggle-btn${!annual?" active":""}`} onClick={()=>setAnnual(false)}>Half-Yearly</button>
             <button className={`pricing-toggle-btn${annual?" active":""}`}  onClick={()=>setAnnual(true)}>
-              Annual <span style={{background:"#dcfce7",color:"#166534",borderRadius:50,padding:"1px 8px",fontSize:".72rem",marginLeft:4}}>Save 20%</span>
+              Yearly <span style={{background:"#dcfce7",color:"#166534",borderRadius:50,padding:"1px 8px",fontSize:".72rem",marginLeft:4}}>Save 20%</span>
             </button>
           </div>
 
@@ -105,7 +105,7 @@ export default function Pricing() {
                       <div>
                         <span className="pricing-amount">{annual ? plan.annual : plan.monthly}</span>
                         <span className="pricing-period">/month</span>
-                        {annual && <div style={{fontSize:".78rem",color:"#16a34a",fontWeight:600,marginTop:4}}>Billed annually — save 20%</div>}
+                        {annual && <div style={{fontSize:".78rem",color:"#16a34a",fontWeight:600,marginTop:4}}>Billed annually — Best Value</div>}
                       </div>
                     )}
                   </div>

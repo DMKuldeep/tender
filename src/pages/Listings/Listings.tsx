@@ -1,3 +1,4 @@
+import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import TenderCard from "../../components/TenderCard/TenderCard";
 import { PRODUCTS, CATEGORIES } from "../../data/products";
@@ -11,6 +12,9 @@ export default function Listings() {
   const [maxPrice, setMaxPrice]       = useState(400);
   const [sortBy, setSortBy]           = useState("deadline");
   const [showFilters, setShowFilters] = useState(false);
+  const [searchParams] = useSearchParams();
+  const urlQuery = searchParams.get("q") || "";
+  const [query, setQuery] = useState(urlQuery);
 
   const toggleCat = (c: string) =>
     setSelectedCats(prev =>
