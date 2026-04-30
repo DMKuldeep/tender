@@ -19,7 +19,9 @@ const PUBLIC_LINKS = [
 const USER_LINKS = [
   { to: "/",              label: "Home",      end: true  },
   { to: "/tenders",       label: "Tenders",   end: false },
+  { to: "/companies", label: "Companies", end: false }, 
   { to: "/dashboard",     label: "Dashboard", end: false },
+
 ];
 const ADMIN_LINKS = [
   { to: "/admin",              label: "Overview",  end: true  },

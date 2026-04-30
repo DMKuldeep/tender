@@ -13,6 +13,7 @@ import Login     from "./pages/Login/Login";
 import Signup    from "./pages/Signup/Signup";
 import Analytics from "./pages/Analytics/Analytics";
 import NotFound  from "./pages/NotFound/NotFound";
+import Companies from "./pages/Companies/Companies";
 
 import "./styles/variables.css";
 
@@ -49,6 +50,7 @@ function Shell() {
         <Route path="/dashboard/*" element={<ProtectedUser><Dashboard /></ProtectedUser>} />
         <Route path="/admin/*"     element={<ProtectedAdmin><Admin /></ProtectedAdmin>} />
         <Route path="/analytics" element={<ProtectedUser><Analytics /></ProtectedUser>} />
+        <Route path="/companies" element={<Companies />} />
         <Route path="/404"         element={<NotFound />} />
         <Route path="*"            element={<Navigate to="/404" replace />} />
       </Routes>

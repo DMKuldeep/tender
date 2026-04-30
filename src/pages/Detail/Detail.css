@@ -160,3 +160,52 @@
   .detail-emoji-display { height: 160px; font-size: 4rem; }
   .detail-title { font-size: 1.25rem; }
 }
+
+/* ── Download RFP Button ── */
+.btn-download-rfp {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #0e9f85;
+  background: #ffffff;
+  color: #0e9f85;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1.4;
+  -webkit-appearance: none;
+  appearance: none;
+  text-transform: none;
+}
+.btn-download-rfp:hover:not(:disabled) {
+  background: #0e9f85;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(14, 159, 133, 0.3);
+  transform: translateY(-1px);
+}
+.btn-download-rfp:disabled,
+.btn-download-rfp.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.rfp-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(14, 159, 133, 0.3);
+  border-top-color: #0e9f85;
+  border-radius: 50%;
+  animation: rfp-spin 0.7s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+@keyframes rfp-spin {
+  to { transform: rotate(360deg); }
+}
